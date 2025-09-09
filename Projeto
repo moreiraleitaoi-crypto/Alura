@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viwport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo Sustentável</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: red;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* Botões de ideias de viagem */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #2e7d32;
+      color: white;
+      font-weight: bold;
+    }
+    .card button:hover {
+      background: #1b5e20;
+    }
+
+    /* Acessibilidade */
+    .alto-contraste {
+      background: red !important;
+      color: black !important;
+    }
+    .alto-contraste header {
+      background: red !important;
+      color: black !important;
+    }
+    .alto-contraste footer {
+      background: red !important;
+      color: black !important;
+    }
+    .modo-escuro {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    .modo-escuro header {
+      background: #1b5e20;
+    }
+    .modo-escuro footer {
+      background: #222;
+    }
+
+    /* Botão flutuante de acessibilidade */
+    .acessibilidade-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .botao-principal {
+      background: #2e7d32;
+      color: grey;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .menu-acessibilidade {
+      display: none;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    .menu-acessibilidade button {
+      margin: 5px 0;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4caf50;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .menu-acessibilidade button:hover {
+      background: #388e3c;
+    }
+    .acessibilidade-container:hover .menu-acessibilidade {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Turismo Sustentável</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#dicas">Dicas</a>
+      <a href="#ideias">Ideias de Viagem</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>O que é Turismo Sustentável?</h2>
+      <p>O turismo sustentável busca equilibrar lazer, economia e preservação ambiental. A ideia é viajar de forma consciente, respeitando a natureza e as comunidades locais.</p>
+      <p>Praticar o turismo sustentável significa valorizar a cultura, preservar os recursos naturais e reduzir impactos negativos durante as viagens.</p>
+    </section>
+
+    <section id="dicas">
+      <h2>Dicas de Viagem Sustentável</h2>
+      <ul>
+        <li>Prefira meios de transporte coletivos ou bicicletas.</li>
+        <li>Leve sua própria garrafa reutilizável para reduzir o uso de plástico.</li>
+        <li>Respeite a cultura local e apoie pequenos negócios da região.</li>
+        <li>Escolha hospedagens que tenham práticas ambientais responsáveis.</li>
+      </ul>
+    </section>
+
+    <section id="ideias">
+      <h2>Ideias de Viagem Sustentável</h2>
+      <p>Veja algumas sugestões de destinos e práticas que unem lazer, cultura e preservação ambiental:</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Ecoturismo na Amazônia</h3>
+          <p>Explore trilhas em reservas florestais, aprenda com comunidades ribeirinhas e conheça a biodiversidade única do Brasil.</p>
+          <button onclick="location.href='#amazonia'">Saiba Mais</button>
+        </div>
+        <div class="card">
+          <h3>Cidades Sustentáveis</h3>
+          <p>Visite cidades que incentivam o uso de bicicletas, transporte público eficiente e preservação de áreas verdes.</p>
+          <button onclick="location.href='#cidades'">Saiba Mais</button>
+        </div>
+        <div class="card">
+          <h3>Turismo de Praia Consciente</h3>
+          <p>Desfrute de praias preservadas, participe de mutirões de limpeza e apoie iniciativas de preservação marinha.</p>
+          <button onclick="location.href='#praias'">Saiba Mais</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="amazonia">
+      <h2>Ecoturismo na Amazônia</h2>
+      <p>A Amazônia oferece experiências únicas, como trilhas guiadas, passeios de barco pelos rios e contato com comunidades locais que ensinam práticas de sustentabilidade. Essa é uma oportunidade de valorizar a maior floresta tropical do mundo e ajudar na sua preservação.</p>
+      <img src="https://images.pexels.com/photos/129244/pexels-photo-129244.jpeg" alt="Rio na Amazônia cercado de floresta">
+    </section>
+
+    <section id="cidades">
+      <h2>Cidades Sustentáveis</h2>
+      <p>Cidades como Copenhague e Amsterdã são exemplos de mobilidade sustentável. No Brasil, Curitiba também é referência em transporte público e áreas verdes. Viajar para esses locais inspira práticas que podemos adotar no dia a dia.</p>
+      <img src="https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg" alt="Cidade com ciclovias e transporte público">
+    </section>
+
+    <section id="praias">
+      <h2>Turismo de Praia Consciente</h2>
+      <p>Além de aproveitar o mar, é importante preservar o ecossistema. Muitos destinos oferecem atividades como mergulho responsável, limpeza de praias e apoio a projetos de proteção da fauna marinha.</p>
+      <img src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg" alt="Praia limpa com águas cristalinas">
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <p>Alguns destinos que inspiram a prática do turismo sustentável:</p>
+      <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg" alt="Trilha em floresta com pessoas caminhando">
+      <img src="https://images.pexels.com/photos/460775/pexels-photo-460775.jpeg" alt="Bicicletas em cidade sustentável">
+      <img src="https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg" alt="Vista de uma praia limpa e preservada">
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Quer saber mais sobre turismo sustentável? Envie uma mensagem para:  
+      <a href="mailto:contato@turismosustentavel.com">contato@turismosustentavel.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Turismo Sustentável | Imagens: Pexels (Creative Commons)</p>
+  </footer>
+
+  <!-- Botão flutuante de acessibilidade -->
+  <div class="acessibilidade-container">
+    <button class="botao-principal">♿</button>
+    <div class="menu-acessibilidade">
+      <button onclick="toggleContraste()">Alto Contraste</button>
+      <button onclick="toggleDarkMode()">Modo Escuro</button>
+      <button onclick="aumentarFonte()">Aumentar Fonte</button>
+      <button onclick="diminuirFonte()">Diminuir Fonte</button>
+      <button onclick="resetarAcessibilidade()">Resetar</button>
+    </div>
+  </div>
+
+  <script>
+    let tamanhoFonte = 16; // valor inicial da fonte em px
+
+    function toggleContraste() {
+      document.body.classList.toggle("alto-contraste");
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("modo-escuro");
+    }
+    function aumentarFonte() {
+      tamanhoFonte += 2;
+      document.body.style.fontSize = tamanhoFonte + "px";
+    }
+    function diminuirFonte() {
+      if (tamanhoFonte > 12) {
+        tamanhoFonte -= 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
+      }
+    }
+    function resetarAcessibilidade() {
+      document.body.classList.remove("alto-contraste", "modo-escuro");
+      tamanhoFonte = 16;
+      document.body.style.fontSize = tamanhoFonte + "px";
+    }
+  </script>
+</body>
+</html>
